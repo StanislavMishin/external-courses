@@ -7,11 +7,11 @@ function typeData(val) {
   } if (typeof val === 'string') {
     console.log('string');
     return 'string';
-  } if (isNaN(val) || (typeof val !== 'number' && typeof val !== 'string')) {
+  } if (isNaN(val)) {
     console.log('undefined');
     return undefined;
   }
-  return '';
+  return undefined;
 }
 
 typeData(value);
