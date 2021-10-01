@@ -12,14 +12,24 @@ const student = {
   },
 };
 
-function cloneObj(obj) {
-  const clone = JSON.parse(JSON.stringify(obj));
-  const keysClone = Object.keys(clone);
-
-  for (let i = 0; i < keysClone.length; i += 1) {
-    clone[keysClone[i]] = (typeof obj[keysClone[i]]) === 'object' ? cloneObj(clone[keysClone[i]]) : obj[keysClone[i]];
+function cloneObj(from) {
+  const to = {};
+  const keys = Object.keys(from);
+  for (let i = 0; i < keys.length; i += 1) {
+    const cloningField = from[keys[i]];
+    if (Array.isArray(cloningField)) {
+      const clonedArray = [cloningField.length];
+      for (let j = 0; j < cloningField.length; j += 1) {
+        clonedArray[j] = cloneObj(cloningField[j]);
+      }
+      to[keys[i]] = clonedArray;
+    } else if (typeof cloningField === 'object') {
+      to[keys[i]] = cloneObj(cloningField);
+    } else {
+      to[keys[i]] = from[keys[i]];
+    }
   }
-  return clone;
+  return to;
 }
 
 cloneObj(student);
