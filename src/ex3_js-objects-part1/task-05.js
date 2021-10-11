@@ -6,7 +6,10 @@ const student = {
 };
 
 function copyObj(obj) {
-  return Object.assign(...obj);
+  const newObj = {};
+  Object.assign(newObj, obj);
+
+  return newObj;
 }
 
 copyObj(student);
