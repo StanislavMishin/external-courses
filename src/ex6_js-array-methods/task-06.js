@@ -1,17 +1,9 @@
 function reduce(array, callback, initialValue) {
-  let previousValue;
+  let previousValue = initialValue || array[0];
+  let i = (previousValue === initialValue) ? 0 : 1;
 
-  if (initialValue) {
-    previousValue = initialValue;
-    for (let i = 0; i < array.length; i += 1) {
-      previousValue = callback(previousValue, array[i], i, array);
-    }
-  }
-  if (!initialValue) {
-    previousValue = array[0];
-    for (let i = 1; i < array.length; i += 1) {
-      previousValue = callback(previousValue, array[i], i, array);
-    }
+  for (i; i < array.length; i += 1) {
+    previousValue = callback(previousValue, array[i], i, array);
   }
 
   return previousValue;
