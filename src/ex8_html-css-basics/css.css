@@ -1,0 +1,44 @@
+.parag {
+    font-family: 'Nunito', sans-serif;
+    text-indent: 10px;
+    background-image: url(https://oir.mobi/uploads/posts/2021-03/1616563557_6-p-fon-abstraktsiya-geometriya-6.jpg);
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: -5px -5px 10px -5px rgba(34, 60, 80, 0.6);
+}
+
+.parag h2 {
+    color: #9c1717;
+}
+
+a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9c1717;
+}
+
+.links h2 {
+    color: white;
+    padding: 8px;
+    background: url(https://lh3.googleusercontent.com/proxy/ifjh6sx85eix2EV0uYgMtfz0NOLXSBIjvGXwn5rhnjclaRBFoT9pp2TVD4q0JT8kF_Bopl7bzDx9a9M7TKr931ajhKGnb_X_2r7hUQmMlQ3jCG7guVB2qvAT38-61H5QHjXQ);
+    border-radius: 4px;
+    margin: 0;
+}
+
+.links ul {
+    margin: 0;
+    padding: 10px 0 0 10px;
+    list-style: none;
+}
+
+.links li {
+    margin: 0 0 6px 0;
+}
+
+.links li:last-child {
+    margin: 0;
+}
