@@ -1,0 +1,126 @@
+.hourGlass {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  .hourGlass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 30px;
+    border: 50px solid #000;
+    border-color: #e7d213 transparent #e7d213 transparent;
+    animation: hourglass 1.6s infinite;
+  }
+  @keyframes hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
+  
+
+  /* --------------- */
+
+.containerCircle {
+    display: flex;
+    max-width: 300px;
+    height: 200px;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+  .circle {
+    display: block;
+    background: linear-gradient(#EE4540, #C72C41, #801336, #510A32, #2D142C);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    align-self: flex-end;
+    animation: circle 2s infinite;
+  }
+  .leftBorder,
+  .rightBorder {
+      width: 10px;
+      height: 200px;
+      background: linear-gradient(#2D142C, #510A32, #801336, #C72C41, #EE4540);
+  }
+
+  @keyframes circle {
+    0% {
+      transform: translateX(0) translateY(0);
+      animation-timing-function: linear;
+    }
+    25% {
+      transform: translateX(-110px) translateY(-50px);
+      animation-timing-function: linear;
+    }
+    50% {
+      transform: translateX(0px) translateY(0px);
+      animation-timing-function: linear;
+    }
+    75% {
+      transform: translateX(110px) translateY(-50px);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+      animation-timing-function: linear;
+    }
+  }
+
+
+
+
+  /* ------------ */
+
+  .animatedFg {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+      border-radius: 50%;
+      background: rgb(2,0,36);
+      background: radial-gradient(rgb(8, 172, 117),rgb(7, 73, 46),rgb(1, 135, 161));
+      animation: animFg 4s infinite;
+      animation-direction: alternate;
+
+
+  }
+
+  @keyframes animFg {
+      0% {
+        animation-timing-function: linear;
+      }
+      15% {
+        background: radial-gradient(rgb(8, 172, 117),rgb(7, 73, 46),rgb(1, 135, 161));
+        border-radius: 0px;
+      }
+      30% {
+        background: radial-gradient(rgb(235, 155, 189), rgb(120, 169, 224));
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      45% {
+          transform: scale(1.5) skew(-20deg);
+      }
+      60% {
+          transform: rotate(800deg);
+      }
+      75% {
+        background: radial-gradient(circle, rgba(180,58,72,1) 0%, rgba(252,176,69,1) 46%, rgba(253,29,29,1) 67%);
+      }
+      100% {
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(180,58,72,1) 0%, rgba(252,176,69,1) 46%, rgba(253,29,29,1) 67%);
+      }
+  }
