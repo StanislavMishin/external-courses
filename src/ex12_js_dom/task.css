@@ -1,0 +1,44 @@
+.container {
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+}
+.slider {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slider-flexRow {
+    display: flex;
+    height: 300px;
+    border: 1px solid black;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.slider-flexRow img {
+    max-width: 400px;
+    height: 100%;
+}
+
+.blockButton {
+    width: 230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.button__prev,
+.button__next {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    width: 100px;
+    padding: 5px 0;
+    margin: 10px 0;
+    outline: 1px solid #000;
+}
+.button__prev:hover,
+.button__next:hover {
+    background: rgb(162, 195, 245);
+}
