@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task-02.css">
+    <title>task-02</title>
+</head>
+
+<body>
+
+    <form action="http://httpbin.org/post" method="POST" class="formContainer">
+        <fieldset>
+            <legend>Personal data</legend>
+            <div>
+                <label for="surname">Surname</label>
+                <input type="text" id="surmane">
+            </div>
+
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName">
+            </div>
+
+            <div>
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName">
+            </div>
+
+            <div>
+                <span>You are</span>
+                <input type="radio" id="male" name="youAre">
+                <label for="male">male</label>
+                <input type="radio" id="female" name="youAre">
+                <label for="female">female</label>
+            </div>
+
+            <div>
+                <label for="age">Age</label>
+                <input type="number" id="age" min="18" max="101">
+            </div>
+
+            <div>
+                <label for="countryOfResidence">Country of Residence</label>
+                <select name="" id="countryOfResidence">
+                    <option value="Russia">Russia</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Denmark">Denmark</option>
+                </select>
+            </div>
+
+            <div>
+                <span>City</span>
+                <input type="checkbox" id="ryazan">
+                <label for="ryazan">Ryazan</label>
+                <input type="checkbox" id="moscow">
+                <label for="moscow">Moscow</label>
+            </div>
+
+            <div>
+                <span>Photography</span>
+                <input type="file">
+            </div>
+
+            <hr>
+
+            <div>
+                <span>Title</span>
+
+                <select>
+                    <optgroup label="Technologies">
+                        <option value="t1">Web Master</option>
+                        <option value="t2">Database Administrator</option>
+                        <option value="t3">Computer-aided design</option>
+                    </optgroup>
+                    <optgroup label="Finance">
+                        <option value="f1">Economic Planning</option>
+                        <option value="f2">Management accounting</option>
+                        <option value="f3">Budgeting and planning</option>
+                    </optgroup>
+
+                </select>
+            </div>
+            <div>
+                <span>Salary</span>
+                <input type="range" min="0" max="100" step="1" value="50">
+            </div>
+
+            <div>
+                <textarea name="" id="" cols="40" rows="10" placeholder="Tell us about yourself..."></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <label for="site">Site</label>
+                <input type="url" id="site">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" pattern="8 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"
+                    placeholder="8 xxx xxx xx xx" required>
+            </div>
+        </fieldset>
+
+        <div class="inputPassword">
+            <label for="pass">Password</label>
+            <input type="password" id="pass"
+                title="Пароль должен содержать 8 или более символов, которые имеют хотя бы одно число, и одну букву верхнего и нижнего регистра"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        </div>
+
+        <div>
+            <button>Отправить</button>
+            <input type="reset" id="reset">
+        </div>
+
+    </form>
+
+</body>
+
+</html>
