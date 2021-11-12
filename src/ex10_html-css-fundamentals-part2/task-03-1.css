@@ -12,7 +12,7 @@ th {
 }
 td {
     padding: 20px;
-    font-family: 'roboto', serif;
+    font-family: "roboto", serif;
     color: #525151;
 }
 span {
@@ -27,13 +27,6 @@ td span::first-letter {
 .row:nth-child(2n + 2) {
     background: #f2f6fa;
 }
-.row1:hover,
-.row2:hover,
-.row3:hover,
-.row4:hover,
-.row5:hover,
-.row6:hover,
-.row7:hover,
-.row8:hover{
+.rowActive:hover {
     background: #c9d1d8;
 }
