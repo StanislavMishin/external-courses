@@ -60,6 +60,9 @@ main.content {
     margin: 0 30px 0 0;
     font-weight: 400;
 }
+.header-flexRow__buttonCreateNewList:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
 a.header-flexRow__buttonCreateNewList {
     color: #000;
 }
@@ -70,9 +73,8 @@ a.header-flexRow__buttonCreateNewList {
     max-width: 24px;
     max-height: 24px;
 }
-.titleButton a {
-    display: inline-block;
-    color: #000;
+.titleButton p {
+    cursor: pointer;
 }
 .header-flexRow-blockUser {
     display: flex;
@@ -91,6 +93,91 @@ a.header-flexRow__buttonCreateNewList {
 }
 .header-flexRow-blockUser__buttonMenu img {
     width: 100%;
+}
+.header-flexRow-blockUser__buttonMenu img:hover {
+    opacity: 90%;
+}
+.arrowBottom {
+    animation: rotate 0.5s;
+    animation-fill-mode: forwards;
+}
+.arrowTop {
+    animation: rotate2 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotate2 {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.blockMenu {
+    width: 200px;
+    box-shadow: 0 0 50px rgba(204, 204, 204, 0.9) inset;
+    background: rgb(0, 103, 163, 0.1);
+    position: absolute;
+    right: 0px;
+    top: 65px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    padding: 10px 0 0 0;
+    animation: show 0.4s;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.block__nameUserAndEmail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 5px 0;
+}
+.block__nameUserAndEmail p:first-child {
+    margin: 0 0 3px 0;
+}
+.block__nameUserAndEmail a {
+    color: #000;
+}
+.block__nameUserAndEmail a:hover {
+    color: rgb(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.blockButtons {
+    font-size: 1.6rem;
+}
+.buttonMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.buttonMenu:hover {
+    background: rgb(0, 103, 163, 0.1);
+}
+a.buttonMenu:last-child {
+    margin: 0;
+}
+.buttonMenu img {
+    width: 30px;
+    height: 30px;
 }
 
 /* FOOTER */
