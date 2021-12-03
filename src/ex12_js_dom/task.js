@@ -1,27 +1,28 @@
-const arrImage = ['asset/1.webp', 'asset/2.webp', 'asset/3.jpeg', 'asset4.webp', 'asset/5.webp'];
+const arrImages = ['asset/1.webp', 'asset/2.webp', 'asset/3.webp', 'asset/4.webp'];
 
-let offset = 0;
 const sliderFlexRow = document.querySelector('.slider-flexRow');
+const image = sliderFlexRow.querySelector('img');
 
 const buttonSliderPrev = document.querySelector('.button__prev');
 const buttoSlidernNext = document.querySelector('.button__next');
 
-for (let i = 1; i <= arrImage.length; i += 1) {
-  sliderFlexRow.insertAdjacentHTML('beforeend', `<img src="asset/${i}.webp">`);
-}
+image.src = arrImages[0];
+let sliderIndex = 0;
 
 buttoSlidernNext.addEventListener('click', () => {
-  offset += 400;
-  if (offset > 1600) {
-    offset = 0;
+  if (sliderIndex === arrImages.length - 1) {
+    sliderIndex = -1;
   }
-  sliderFlexRow.style.left = `${-offset}px`;
+  sliderIndex += 1;
+  image.src = arrImages[sliderIndex];
+  console.log(sliderIndex);
 });
 
 buttonSliderPrev.addEventListener('click', () => {
-  offset -= 400;
-  if (offset < 0) {
-    offset = 1600;
+  if (sliderIndex === -1 || sliderIndex === 0) {
+    sliderIndex = arrImages.length;
   }
-  sliderFlexRow.style.left = `${-offset}px`;
+  sliderIndex -= 1;
+  image.src = arrImages[sliderIndex];
+  console.log(sliderIndex);
 });
