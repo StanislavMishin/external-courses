@@ -1,0 +1,205 @@
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+main.content {
+    flex: 1 0 auto;
+}
+
+/*  HEADER */
+
+.kanban-header {
+    background: rgb(0, 103, 163);
+    padding: 7px 0;
+}
+.kanban-header p {
+    cursor: default;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+.header-flexRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50;
+}
+
+.header-flexRow__menuBurger {
+    display: flex;
+    align-items: center;
+    max-width: 350px;
+}
+.header-flexRow__menuBurger img {
+    color: #fff;
+    max-width: 35px;
+    max-height: 35px;
+    margin: 0 13px 0 0;
+}
+.header-flexRow__title {
+    font-size: 2.3em;
+    color: #fff;
+}
+
+.header-flexRow-Rigth {
+    display: flex;
+    align-items: center;
+}
+.header-flexRow__buttonCreateNewList {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    font-size: 1.5em;
+    background: #fff;
+    border-radius: 5px;
+    padding: 2px 12px 3px 5px;
+    margin: 0 30px 0 0;
+    font-weight: 400;
+}
+.header-flexRow__buttonCreateNewList:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+a.header-flexRow__buttonCreateNewList {
+    color: #000;
+}
+.iconButton {
+    margin: 0 7px 0 0;
+}
+.iconButton img {
+    max-width: 24px;
+    max-height: 24px;
+}
+.titleButton p {
+    cursor: pointer;
+}
+.header-flexRow-blockUser {
+    display: flex;
+    align-items: center;
+}
+.header-flexRow-blockUser__avatar {
+    margin: 0 3px 0 0;
+}
+.header-flexRow-blockUser__avatar img {
+    max-width: 50px;
+    max-height: 50px;
+}
+.header-flexRow-blockUser__buttonMenu {
+    width: 15px;
+    height: 15px;
+}
+.header-flexRow-blockUser__buttonMenu img {
+    width: 100%;
+}
+.header-flexRow-blockUser__buttonMenu img:hover {
+    opacity: 90%;
+}
+.arrowBottom {
+    animation: rotate 0.5s;
+    animation-fill-mode: forwards;
+}
+.arrowTop {
+    animation: rotate2 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotate2 {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.blockMenu {
+    width: 200px;
+    box-shadow: 0 0 50px rgba(204, 204, 204, 0.9) inset;
+    background: rgb(0, 103, 163, 0.1);
+    position: absolute;
+    right: 0px;
+    top: 65px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    padding: 10px 0 0 0;
+    animation: show 0.4s;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.block__nameUserAndEmail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 5px 0;
+}
+.block__nameUserAndEmail p:first-child {
+    margin: 0 0 3px 0;
+}
+.block__nameUserAndEmail a {
+    color: #000;
+}
+.block__nameUserAndEmail a:hover {
+    color: rgb(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.blockButtons {
+    font-size: 1.6rem;
+}
+.buttonMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.buttonMenu:hover {
+    background: rgb(0, 103, 163, 0.1);
+}
+a.buttonMenu:last-child {
+    margin: 0;
+}
+.buttonMenu img {
+    width: 30px;
+    height: 30px;
+}
+
+/* FOOTER */
+
+.kanban-footer {
+    background: rgb(0, 103, 163);
+    font-size: 1.5em;
+    color: #fff;
+    flex: 0 0 auto;
+    padding: 15px 0;
+}
+.kanban-footer p {
+    cursor: default;
+}
+.footer-flexRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 40px;
+}
+.footer-flexRow-Left {
+    display: flex;
+}
+.footer-flexRow__activeTask {
+    margin: 0 30px 0 0;
+}
