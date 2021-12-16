@@ -1,0 +1,21 @@
+.kanban-footer {
+    background: rgb(0, 103, 163);
+    font-size: 1.5em;
+    color: #fff;
+    flex: 0 0 auto;
+    padding: 15px 0;
+}
+.kanban-footer p {
+    cursor: default;
+}
+.footer-flexRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 40px;
+}
+.footer-flexRow-Left {
+    display: flex;
+}
+.footer-flexRow__activeTask {
+    margin: 0 30px 0 0;
+}

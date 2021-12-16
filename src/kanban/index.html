@@ -5,79 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/zero.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/zero.css">
+    <script src="https://kit.fontawesome.com/ec21697eb6.js" crossorigin="anonymous"></script>
     <title>kanban</title>
-
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="kanban-header">
-            <div class="container">
-                <div class="header-flexRow">
-                    <div>
-                        <div class="header-flexRow__menuBurger">
-                            <a href="#"><img src="https://img.icons8.com/material-outlined/48/ffffff/list.png" /></a>
-                            <div class="header-flexRow__title">
-                                <p>Awesome Kanban Board</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="header-flexRow-Rigth">
-                        <a href="#" class="header-flexRow__buttonCreateNewList">
-                            <div class="iconButton">
-                                <img src="https://img.icons8.com/doodle/48/000000/add.png" />
-                            </div>
-                            <div class="titleButton">
-                                <p>Create new list</p>
-                            </div>
-                        </a>
-                        <div class="header-flexRow-blockUser">
-                            <div class="header-flexRow-blockUser__avatar">
-                                <img src="https://img.icons8.com/doodle/100/000000/user-male-circle.png" />
-                            </div>
-                            <a href="#" id="blockUser__buttonMenu" class="header-flexRow-blockUser__buttonMenu">
-                                <img id="img" src="https://img.icons8.com/material/50/ffffff/chevron-down.png" />
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-
-        <main class="content" id="main">
-            <div class="container">
-                <div class="blockFlexRow">
-                </div>
-            </div>
-        </main>
-
-        <footer class="kanban-footer">
-            <div class="container">
-                <div class="footer-flexRow">
-                    <div class="footer-flexRow-Left">
-                        <div class="footer-flexRow__activeTask">
-                            <p>Active tasks: &#60;<span>N</span>&#62;</p>
-                        </div>
-                        <div class="footer-flexRow__finishedTasks">
-                            <p>Finished tasks: &#60;<span>M</span>&#62;</p>
-                        </div>
-                    </div>
-                    <div class="footer-flexRow-Rigth">
-                        <div class="footer-flexRow__userName">
-                            <p>Kanban board by &#60;<span>NAME</span>&#62;, &#60;<span>YEAR</span>&#62;</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script async src="./script/menuUser.js"></script>
-    <script async src="./script/createBoars.js"></script>
-
+    <div class="wrapper"></div>
+    <script async type="module" src="src/index.js"></script>
 </body>
 
 </html>
