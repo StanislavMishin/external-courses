@@ -1,0 +1,102 @@
+main.content {
+    background: rgb(1, 121, 191);
+    width: 100%;
+    overflow: scroll;
+    flex: 1 0 auto;
+}
+.blockFlexRow {
+    display: flex;
+    padding: 20px 0;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.columnTask {
+    flex: 1 0 300px;
+    max-width: 300px;
+    background: rgb(235, 236, 240);
+    border-radius: 10px;
+    font-size: 1.6em;
+    padding: 13px;
+    margin: 0 30px 0 0;
+    max-height: 80vh;
+    overflow: scroll;
+}
+.columnTask p::first-letter {
+    text-transform: uppercase;
+}
+.titleBoard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+.blockTask {
+    background: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 6px;
+    margin: 0 0 12px 0;
+}
+.blockTask input {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-align: left;
+}
+.select-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #6c7231;
+    border-radius: 8px;
+}
+
+.select-wrapper:hover {
+    box-shadow: 0px 0px 3px gray;
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 28px;
+    padding: 0 20px 0 7px;
+    background: transparent;
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.select-arrow-3 {
+    position: absolute;
+    z-index: 1;
+    border: 8px solid transparent;
+    border-bottom: 0;
+    right: 6px;
+}
+.select-arrow-3:nth-child(1) {
+    top: 11px;
+    border-top-color: #000000;
+}
+.select-arrow-3:nth-child(2) {
+    top: 8px;
+    border-top-color: #fff;
+}
+.buttonAddTask:before {
+    content: "\2295";
+    font-size: 2.9rem;
+    margin: 0 4px 2px 0;
+    color: rgb(61, 70, 85);
+}
+.buttonAddTask {
+    display: flex;
+    align-items: center;
+    color: rgb(61, 70, 85);
+    cursor: pointer;
+    background: rgb(235, 236, 240);
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.buttonAddTask[disabled],
+.buttonAddTask[disabled]::before {
+    color: rgb(94, 108, 132, 0.7);
+    cursor: default;
+    pointer-events: none;
+}
